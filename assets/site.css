@@ -442,3 +442,15 @@ footer nav a{color:var(--muted)}
 .legal th{color:var(--ink);background:rgba(255,255,255,.04)}
 .legal td{color:#c2c2c7}
 .legal td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+
+/* ---------- Instagram ---------- */
+.social{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:600}
+.social:hover{text-decoration:none;color:#fff}
+.social svg{color:#e1306c}
+.ig-card{display:flex;align-items:center;gap:14px;padding:14px 20px 14px 14px;border-radius:20px;color:var(--ink);text-align:left;transition:transform .2s var(--ease-out)}
+.ig-card:hover{text-decoration:none;transform:translateY(-2px)}
+.ig-card:active{transform:scale(.98)}
+.ig-ico{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;color:#fff;
+  background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+.ig-card b{display:block;font-size:1rem}
+.ig-card small{display:block;color:var(--muted);font-size:.85rem}
