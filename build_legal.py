@@ -14,6 +14,26 @@ ROOT = pathlib.Path(__file__).parent
 STORE = "https://apps.apple.com/us/app/onyx-fitness-ai-coach/id6758569382?uo=4"
 PAGES = [("privacy", "Privacy"), ("terms", "Terms"), ("medical", "Medical Disclaimer"),
          ("support", "Support"), ("accessibility", "Accessibility")]
+VERSION = "3"   # bump when site.css changes, so browsers fetch the new one
+
+# One line under each card, and its colour and icon.
+CARDS = {
+    "privacy": ("Your data, and who sees it", "#5cd973",
+                '<path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6z"/><path d="M9 12l2 2 4-4"/>'),
+    "terms": ("The rules, and your subscription", "#598cff",
+              '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/>'),
+    "medical": ("What Onyx is, and isn't", "#ff6b81",
+                '<path d="M3 12h4l2-5 4 10 2-5h6"/>'),
+    "support": ("Answers, and how to reach me", "#e2ac5f",
+                '<path d="M4 5h16v11H9l-5 4z"/><path d="M10 9.5a2 2 0 1 1 2.6 1.9c-.4.1-.6.5-.6.9v.2M12 14.5h.01"/>'),
+    "accessibility": ("For every way you use Onyx", "#5ce6c7",
+                      '<circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5l-3.5 6M12 15l3.5 6"/>'),
+}
+
+
+def icon(slug, size=22):
+    return (f'<svg viewBox="0 0 24 24" width="{size}" height="{size}" fill="none" stroke="currentColor" '
+            f'stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{CARDS[slug][2]}</svg>')
 
 
 def inline(t):
@@ -67,10 +87,30 @@ def render(md):
     return "\n".join(out)
 
 
+def sections(content):
+    """Intro (before the first heading) and one card per ## section."""
+    parts = re.split(r'(?=<h2 id=)', content)
+    intro = parts[0].strip()
+    cards = [p.strip() for p in parts[1:]]
+    toc = [(m.group(1), re.sub("<[^>]+>", "", m.group(2))) for m in
+           (re.match(r'<h2 id="([^"]+)">(.*?)</h2>', c) for c in cards) if m]
+    return intro, cards, toc
+
+
 def page(meta, content, updated):
-    tabs = "".join(
-        f'<a href="{s}.html"{" aria-current=page" if s == meta["slug"] else ""}>{name}</a>' for s, name in PAGES)
-    when = f'<p class="updated">Last updated: {updated}</p>' if updated else ""
+    me = meta["slug"]
+    color = CARDS[me][1]
+    cards = "".join(
+        f'<a class="pcard{" current" if s == me else ""}" href="{s}.html" style="--tint:{CARDS[s][1]}"'
+        f'{" aria-current=page" if s == me else ""}><span class="pico">{icon(s)}</span>'
+        f'<b>{name}</b><span>{CARDS[s][0]}</span></a>' for s, name in PAGES)
+    links = "".join(f'<a href="{s}.html">{name}</a>' for s, name in PAGES)
+    intro, blocks, toc = sections(content)
+    when = f'<span class="chip">Updated {updated}</span>' if updated else ""
+    intro_html = f'<div class="lead-card glass">{intro}</div>' if intro else ""
+    body = "".join(f'<section class="lcard glass">{b}</section>' for b in blocks)
+    toc_html = ("<aside class=\"toc\"><div class=\"cap\">On this page</div>" +
+                "".join(f'<a href="#{i}">{t}</a>' for i, t in toc) + "</aside>") if len(toc) > 2 else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -81,9 +121,9 @@ def page(meta, content, updated):
   <title>{meta['title']} · Onyx</title>
   <meta name="description" content="{html.escape(meta['description'])}" />
   <link rel="icon" href="assets/icon.jpg" />
-  <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/site.css?v={VERSION}" />
 </head>
-<body>
+<body class="legal-page" style="--tint:{color}">
   <header class="site">
     <div class="nav">
       <a class="brand" href="./" aria-label="Onyx home"><img src="assets/icon.jpg" alt="" />ONYX</a>
@@ -95,19 +135,52 @@ def page(meta, content, updated):
       </nav>
     </div>
   </header>
-  <main class="legal">
-    <nav class="legal-tabs" aria-label="Policies">{tabs}</nav>
-    <h1>{meta['title']}</h1>
-    {when}
-{content}
+  <main class="legal-wrap">
+    <p class="label" style="text-align:left">Policies</p>
+    <nav class="policy-cards" aria-label="Policies">{cards}</nav>
+
+    <header class="legal-hero glass">
+      <span class="hero-ico">{icon(me, 30)}</span>
+      <div>
+        <h1>{meta['title']}</h1>
+        <p class="desc">{html.escape(meta['description'])}</p>
+        {when}
+      </div>
+    </header>
+
+    <div class="legal-body">
+      {toc_html}
+      <article class="legal">
+        {intro_html}
+        {body}
+      </article>
+    </div>
   </main>
   <footer class="site">
     <div class="foot">
       <div class="brandline"><img src="assets/icon.jpg" alt="" />Onyx: Fitness &amp; AI Coach</div>
-      <nav aria-label="Footer"><a href="./">Home</a>{tabs}</nav>
+      <nav aria-label="Footer"><a href="./">Home</a>{links}</nav>
       <p>Onyx is not a medical device and does not diagnose. © 2026 TheMillerBrand.</p>
     </div>
   </footer>
+  <script>
+    // Highlight the section you're reading in "On this page".
+    (function () {{
+      var links = document.querySelectorAll(".toc a");
+      if (!links.length || !("IntersectionObserver" in window)) return;
+      var byId = {{}};
+      links.forEach(function (a) {{ byId[a.getAttribute("href").slice(1)] = a; }});
+      var io = new IntersectionObserver(function (es) {{
+        es.forEach(function (e) {{
+          if (!e.isIntersecting) return;
+          links.forEach(function (a) {{ a.classList.remove("on"); }});
+          var h = e.target.querySelector("h2"), a = h && byId[h.id];
+          if (a) a.classList.add("on");
+        }});
+      }}, {{ rootMargin: "-30% 0px -60% 0px" }});
+      document.querySelectorAll(".lcard").forEach(function (c) {{ io.observe(c); }});
+    }})();
+  </script>
 </body>
 </html>
 """

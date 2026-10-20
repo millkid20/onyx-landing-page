@@ -8,9 +8,9 @@
   <title>Accessibility Statement · Onyx</title>
   <meta name="description" content="How Onyx supports VoiceOver, Dynamic Type, Reduce Motion and more, and where it still falls short." />
   <link rel="icon" href="assets/icon.jpg" />
-  <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/site.css?v=3" />
 </head>
-<body>
+<body class="legal-page" style="--tint:#5ce6c7">
   <header class="site">
     <div class="nav">
       <a class="brand" href="./" aria-label="Onyx home"><img src="assets/icon.jpg" alt="" />ONYX</a>
@@ -22,39 +22,66 @@
       </nav>
     </div>
   </header>
-  <main class="legal">
-    <nav class="legal-tabs" aria-label="Policies"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="medical.html">Medical Disclaimer</a><a href="support.html">Support</a><a href="accessibility.html" aria-current=page>Accessibility</a></nav>
-    <h1>Accessibility Statement</h1>
-    <p class="updated">Last updated: 19 October 2026</p>
-<p>Onyx should work for everyone who wants to understand their body, including people who use VoiceOver, larger text, or reduced motion. This page says what Onyx supports, where it still falls short, and how to tell us about a problem.</p>
-<h2 id="what-onyx-supports">What Onyx supports</h2>
+  <main class="legal-wrap">
+    <p class="label" style="text-align:left">Policies</p>
+    <nav class="policy-cards" aria-label="Policies"><a class="pcard" href="privacy.html" style="--tint:#5cd973"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><b>Privacy</b><span>Your data, and who sees it</span></a><a class="pcard" href="terms.html" style="--tint:#598cff"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></span><b>Terms</b><span>The rules, and your subscription</span></a><a class="pcard" href="medical.html" style="--tint:#ff6b81"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><b>Medical Disclaimer</b><span>What Onyx is, and isn't</span></a><a class="pcard" href="support.html" style="--tint:#e2ac5f"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9.5a2 2 0 1 1 2.6 1.9c-.4.1-.6.5-.6.9v.2M12 14.5h.01"/></svg></span><b>Support</b><span>Answers, and how to reach me</span></a><a class="pcard current" href="accessibility.html" style="--tint:#5ce6c7" aria-current=page><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5l-3.5 6M12 15l3.5 6"/></svg></span><b>Accessibility</b><span>For every way you use Onyx</span></a></nav>
+
+    <header class="legal-hero glass">
+      <span class="hero-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5l-3.5 6M12 15l3.5 6"/></svg></span>
+      <div>
+        <h1>Accessibility Statement</h1>
+        <p class="desc">How Onyx supports VoiceOver, Dynamic Type, Reduce Motion and more, and where it still falls short.</p>
+        <span class="chip">Updated 19 October 2026</span>
+      </div>
+    </header>
+
+    <div class="legal-body">
+      <aside class="toc"><div class="cap">On this page</div><a href="#what-onyx-supports">What Onyx supports</a><a href="#standards">Standards</a><a href="#where-we-know-we-fall-short">Where we know we fall short</a><a href="#reporting-an-accessibility-issue">Reporting an accessibility issue</a><a href="#tested-with">Tested with</a><a href="#contact">Contact</a></aside>
+      <article class="legal">
+        <div class="lead-card glass"><p>Onyx should work for everyone who wants to understand their body, including people who use VoiceOver, larger text, or reduced motion. This page says what Onyx supports, where it still falls short, and how to tell us about a problem.</p></div>
+        <section class="lcard glass"><h2 id="what-onyx-supports">What Onyx supports</h2>
 <h3 id="seeing-and-hearing">Seeing and hearing</h3>
 <ul><li>VoiceOver labels on controls, scores and cards, with charts carrying a spoken trend summary</li><li>Dynamic Type, from the default size through the largest accessibility sizes</li><li>Bold Text, Increase Contrast and Reduce Transparency</li><li>Scores, states and warnings come with words, not just colour</li><li>Dark mode is designed independently rather than inverted</li></ul>
 <h3 id="motion">Motion</h3>
 <ul><li>Reduce Motion is respected throughout: animations settle immediately, and Coach holds still instead of bouncing, while still changing expression</li></ul>
 <h3 id="haptics">Haptics</h3>
-<ul><li>Confirm meaningful actions: workout completion, set logged, ring closed, food logged</li><li>Respect the system Haptics setting, and an in-app toggle in You → Preferences</li></ul>
-<h2 id="standards">Standards</h2>
-<p>We aim for WCAG 2.1 AA and follow Apple's Human Interface Guidelines for iOS accessibility.</p>
-<h2 id="where-we-know-we-fall-short">Where we know we fall short</h2>
+<ul><li>Confirm meaningful actions: workout completion, set logged, ring closed, food logged</li><li>Respect the system Haptics setting, and an in-app toggle in You → Preferences</li></ul></section><section class="lcard glass"><h2 id="standards">Standards</h2>
+<p>We aim for WCAG 2.1 AA and follow Apple's Human Interface Guidelines for iOS accessibility.</p></section><section class="lcard glass"><h2 id="where-we-know-we-fall-short">Where we know we fall short</h2>
 <p>Being specific here is more useful than claiming completeness.</p>
-<ul><li><strong>Charts.</strong> Line and bar charts on the Weight, Vitals and Sleep detail screens carry a spoken trend summary, but not the underlying values. A full text alternative ("seven readings, ranging 48 to 61 ms") is still to come.</li><li><strong>Complex gestures.</strong> Swipe-to-delete and drawer drags all have button alternatives, but those alternatives aren't always easy to discover.</li><li><strong>Today screen grouping.</strong> VoiceOver order is correct, but several users have asked to adjust how cards are grouped. Tracked.</li><li><strong>Apple Watch.</strong> The set logger relies on the Digital Crown for reps and weight. There are on-screen alternatives for moving between sets, but Crown-free entry of a specific value is not yet possible.</li><li><strong>Smart Invert</strong> has limited support: charts and the Coach character don't invert cleanly.</li></ul>
-<h2 id="reporting-an-accessibility-issue">Reporting an accessibility issue</h2>
+<ul><li><strong>Charts.</strong> Line and bar charts on the Weight, Vitals and Sleep detail screens carry a spoken trend summary, but not the underlying values. A full text alternative ("seven readings, ranging 48 to 61 ms") is still to come.</li><li><strong>Complex gestures.</strong> Swipe-to-delete and drawer drags all have button alternatives, but those alternatives aren't always easy to discover.</li><li><strong>Today screen grouping.</strong> VoiceOver order is correct, but several users have asked to adjust how cards are grouped. Tracked.</li><li><strong>Apple Watch.</strong> The set logger relies on the Digital Crown for reps and weight. There are on-screen alternatives for moving between sets, but Crown-free entry of a specific value is not yet possible.</li><li><strong>Smart Invert</strong> has limited support: charts and the Coach character don't invert cleanly.</li></ul></section><section class="lcard glass"><h2 id="reporting-an-accessibility-issue">Reporting an accessibility issue</h2>
 <p>Email <a href="mailto:millkid20@gmail.com">millkid20@gmail.com</a> with "accessibility" in the subject. Include:</p>
 <ul><li>The screen or feature affected</li><li>Which assistive technology you're using</li><li>iPhone (or Apple Watch) model and OS version</li><li>What you expected versus what happened</li></ul>
-<p>Accessibility issues get the same priority as security issues. I'll respond within 2 business days and aim to ship a fix in the next release.</p>
-<h2 id="tested-with">Tested with</h2>
+<p>Accessibility issues get the same priority as security issues. I'll respond within 2 business days and aim to ship a fix in the next release.</p></section><section class="lcard glass"><h2 id="tested-with">Tested with</h2>
 <p>VoiceOver · Reduce Motion · Dynamic Type (default through largest accessibility size) · Bold Text · Reduce Transparency · Increase Contrast · Smart Invert (limited)</p>
-<p>If you use something not listed and hit a problem, please report it.</p>
-<h2 id="contact">Contact</h2>
-<p><a href="mailto:millkid20@gmail.com">millkid20@gmail.com</a></p>
+<p>If you use something not listed and hit a problem, please report it.</p></section><section class="lcard glass"><h2 id="contact">Contact</h2>
+<p><a href="mailto:millkid20@gmail.com">millkid20@gmail.com</a></p></section>
+      </article>
+    </div>
   </main>
   <footer class="site">
     <div class="foot">
       <div class="brandline"><img src="assets/icon.jpg" alt="" />Onyx: Fitness &amp; AI Coach</div>
-      <nav aria-label="Footer"><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="medical.html">Medical Disclaimer</a><a href="support.html">Support</a><a href="accessibility.html" aria-current=page>Accessibility</a></nav>
+      <nav aria-label="Footer"><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="medical.html">Medical Disclaimer</a><a href="support.html">Support</a><a href="accessibility.html">Accessibility</a></nav>
       <p>Onyx is not a medical device and does not diagnose. © 2026 TheMillerBrand.</p>
     </div>
   </footer>
+  <script>
+    // Highlight the section you're reading in "On this page".
+    (function () {
+      var links = document.querySelectorAll(".toc a");
+      if (!links.length || !("IntersectionObserver" in window)) return;
+      var byId = {};
+      links.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          links.forEach(function (a) { a.classList.remove("on"); });
+          var h = e.target.querySelector("h2"), a = h && byId[h.id];
+          if (a) a.classList.add("on");
+        });
+      }, { rootMargin: "-30% 0px -60% 0px" });
+      document.querySelectorAll(".lcard").forEach(function (c) { io.observe(c); });
+    })();
+  </script>
 </body>
 </html>
