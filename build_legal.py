@@ -14,7 +14,7 @@ ROOT = pathlib.Path(__file__).parent
 STORE = "https://apps.apple.com/us/app/onyx-fitness-ai-coach/id6758569382?uo=4"
 PAGES = [("privacy", "Privacy"), ("terms", "Terms"), ("medical", "Medical Disclaimer"),
          ("support", "Support"), ("accessibility", "Accessibility")]
-VERSION = "3"   # bump when site.css changes, so browsers fetch the new one
+VERSION = "5"   # bump when site.css changes, so browsers fetch the new one
 
 # One line under each card, and its colour and icon.
 CARDS = {
@@ -160,6 +160,7 @@ def page(meta, content, updated):
     <div class="foot">
       <div class="brandline"><img src="assets/icon.jpg" alt="" />Onyx: Fitness &amp; AI Coach</div>
       <nav aria-label="Footer"><a href="./">Home</a>{links}</nav>
+      <p><a class="social" href="https://www.instagram.com/getonyxapp/" target="_blank" rel="noopener" aria-label="Onyx on Instagram, @getonyxapp"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@getonyxapp</a></p>
       <p>Onyx is not a medical device and does not diagnose. © 2026 TheMillerBrand.</p>
     </div>
   </footer>
