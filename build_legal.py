@@ -14,7 +14,7 @@ ROOT = pathlib.Path(__file__).parent
 STORE = "https://apps.apple.com/us/app/onyx-fitness-ai-coach/id6758569382?uo=4"
 PAGES = [("privacy", "Privacy"), ("terms", "Terms"), ("medical", "Medical Disclaimer"),
          ("support", "Support"), ("accessibility", "Accessibility")]
-VERSION = "4"   # bump when site.css changes, so browsers fetch the new one
+VERSION = "5"   # bump when site.css changes, so browsers fetch the new one
 
 # One line under each card, and its colour and icon.
 CARDS = {
