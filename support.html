@@ -8,9 +8,9 @@
   <title>Support · Onyx</title>
   <meta name="description" content="Answers to common questions about Onyx, and how to reach us." />
   <link rel="icon" href="assets/icon.jpg" />
-  <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/site.css?v=3" />
 </head>
-<body>
+<body class="legal-page" style="--tint:#e2ac5f">
   <header class="site">
     <div class="nav">
       <a class="brand" href="./" aria-label="Onyx home"><img src="assets/icon.jpg" alt="" />ONYX</a>
@@ -22,12 +22,24 @@
       </nav>
     </div>
   </header>
-  <main class="legal">
-    <nav class="legal-tabs" aria-label="Policies"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="medical.html">Medical Disclaimer</a><a href="support.html" aria-current=page>Support</a><a href="accessibility.html">Accessibility</a></nav>
-    <h1>Support</h1>
-    
-<p><em>Questions, bugs, or ideas: email <strong>millkid20@gmail.com</strong>. I read every one.</em></p>
-<h2 id="common-questions">Common questions</h2>
+  <main class="legal-wrap">
+    <p class="label" style="text-align:left">Policies</p>
+    <nav class="policy-cards" aria-label="Policies"><a class="pcard" href="privacy.html" style="--tint:#5cd973"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><b>Privacy</b><span>Your data, and who sees it</span></a><a class="pcard" href="terms.html" style="--tint:#598cff"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></span><b>Terms</b><span>The rules, and your subscription</span></a><a class="pcard" href="medical.html" style="--tint:#ff6b81"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><b>Medical Disclaimer</b><span>What Onyx is, and isn't</span></a><a class="pcard current" href="support.html" style="--tint:#e2ac5f" aria-current=page><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9.5a2 2 0 1 1 2.6 1.9c-.4.1-.6.5-.6.9v.2M12 14.5h.01"/></svg></span><b>Support</b><span>Answers, and how to reach me</span></a><a class="pcard" href="accessibility.html" style="--tint:#5ce6c7"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5l-3.5 6M12 15l3.5 6"/></svg></span><b>Accessibility</b><span>For every way you use Onyx</span></a></nav>
+
+    <header class="legal-hero glass">
+      <span class="hero-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9.5a2 2 0 1 1 2.6 1.9c-.4.1-.6.5-.6.9v.2M12 14.5h.01"/></svg></span>
+      <div>
+        <h1>Support</h1>
+        <p class="desc">Answers to common questions about Onyx, and how to reach us.</p>
+        
+      </div>
+    </header>
+
+    <div class="legal-body">
+      <aside class="toc"><div class="cap">On this page</div><a href="#common-questions">Common questions</a><a href="#coach-is-giving-weird-answers">Coach is giving weird answers</a><a href="#bloodwork-import-didn-t-read-my-panel-correctly">Bloodwork import didn't read my panel correctly</a><a href="#reporting-a-privacy-or-security-issue">Reporting a privacy or security issue</a><a href="#feature-requests">Feature requests</a></aside>
+      <article class="legal">
+        <div class="lead-card glass"><p><em>Questions, bugs, or ideas: email <strong>millkid20@gmail.com</strong>. I read every one.</em></p></div>
+        <section class="lcard glass"><h2 id="common-questions">Common questions</h2>
 <p><strong>My recovery score won't compute.</strong> Onyx needs a few days of overnight data (at minimum HRV, resting heart rate and sleep) to build your baseline. New users see a "building your baseline" note for about the first week, and illness early-warning stays off until there's enough history to be trusted.</p>
 <p><strong>Some metrics show a dash.</strong> Onyx only shows what your device can actually measure, and says so rather than inventing a number. Blood oxygen, breathing disturbances and sleep apnea notifications need a recent Apple Watch and aren't available in every region. Gait metrics (walking speed, step length, asymmetry) are computed by your iPhone after a few days of carrying it.</p>
 <p><strong>Onyx asked for Health permission twice.</strong> That's deliberate. The core metrics are requested at setup; a second, smaller request appears the first time you open the Body tab, covering gait, blood pressure, hydration and heart notifications. Being handed forty switches before you've seen the app work is a worse experience than two short asks.</p>
@@ -38,23 +50,39 @@
 <p><strong>I had v1 and I'm not seeing Pro.</strong> v2.0 grandfathers all v1 users into Pro automatically. If detection missed you, email me and I'll fix it.</p>
 <p><strong>Refunds</strong> are handled by Apple. Use reportaproblem.apple.com. I can't issue Apple-side refunds directly, but I can help you work out what happened.</p>
 <p><strong>Cancel a subscription:</strong> iOS Settings → your name → Subscriptions → Onyx → Cancel.</p>
-<p><strong>Delete my data:</strong> You → Privacy &amp; data → Delete account &amp; data (Settings → Delete account &amp; data on older versions). Apple Health data is unaffected. If you use iCloud, deleting the app alone leaves your synced settings in your iCloud account, so use Delete account &amp; data first if you want them gone.</p>
-<h2 id="coach-is-giving-weird-answers">Coach is giving weird answers</h2>
+<p><strong>Delete my data:</strong> You → Privacy &amp; data → Delete account &amp; data (Settings → Delete account &amp; data on older versions). Apple Health data is unaffected. If you use iCloud, deleting the app alone leaves your synced settings in your iCloud account, so use Delete account &amp; data first if you want them gone.</p></section><section class="lcard glass"><h2 id="coach-is-giving-weird-answers">Coach is giving weird answers</h2>
 <p>Coach is powered by Anthropic's Claude. It's capable but not always right. If something seems off:</p>
-<ul><li>Try rephrasing</li><li>Start a new chat to clear the conversation context</li><li>Email me the question and the reply, and I'll look at the prompt</li></ul>
-<h2 id="bloodwork-import-didn-t-read-my-panel-correctly">Bloodwork import didn't read my panel correctly</h2>
-<p>Extraction reads numbers off an image, and it can misread them, which is why Onyx shows you the whole panel for review before saving anything. Correct any value on that screen. If a particular lab's format fails consistently, send me the layout (with your personal details removed) and I'll tune it.</p>
-<h2 id="reporting-a-privacy-or-security-issue">Reporting a privacy or security issue</h2>
-<p>Email <a href="mailto:millkid20@gmail.com">millkid20@gmail.com</a> with "privacy" or "security" in the subject. I read these first.</p>
-<h2 id="feature-requests">Feature requests</h2>
-<p>I read every email. The roadmap is shaped largely by what people actually ask for. Tell me what's missing.</p>
+<ul><li>Try rephrasing</li><li>Start a new chat to clear the conversation context</li><li>Email me the question and the reply, and I'll look at the prompt</li></ul></section><section class="lcard glass"><h2 id="bloodwork-import-didn-t-read-my-panel-correctly">Bloodwork import didn't read my panel correctly</h2>
+<p>Extraction reads numbers off an image, and it can misread them, which is why Onyx shows you the whole panel for review before saving anything. Correct any value on that screen. If a particular lab's format fails consistently, send me the layout (with your personal details removed) and I'll tune it.</p></section><section class="lcard glass"><h2 id="reporting-a-privacy-or-security-issue">Reporting a privacy or security issue</h2>
+<p>Email <a href="mailto:millkid20@gmail.com">millkid20@gmail.com</a> with "privacy" or "security" in the subject. I read these first.</p></section><section class="lcard glass"><h2 id="feature-requests">Feature requests</h2>
+<p>I read every email. The roadmap is shaped largely by what people actually ask for. Tell me what's missing.</p></section>
+      </article>
+    </div>
   </main>
   <footer class="site">
     <div class="foot">
       <div class="brandline"><img src="assets/icon.jpg" alt="" />Onyx: Fitness &amp; AI Coach</div>
-      <nav aria-label="Footer"><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="medical.html">Medical Disclaimer</a><a href="support.html" aria-current=page>Support</a><a href="accessibility.html">Accessibility</a></nav>
+      <nav aria-label="Footer"><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="medical.html">Medical Disclaimer</a><a href="support.html">Support</a><a href="accessibility.html">Accessibility</a></nav>
       <p>Onyx is not a medical device and does not diagnose. © 2026 TheMillerBrand.</p>
     </div>
   </footer>
+  <script>
+    // Highlight the section you're reading in "On this page".
+    (function () {
+      var links = document.querySelectorAll(".toc a");
+      if (!links.length || !("IntersectionObserver" in window)) return;
+      var byId = {};
+      links.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          links.forEach(function (a) { a.classList.remove("on"); });
+          var h = e.target.querySelector("h2"), a = h && byId[h.id];
+          if (a) a.classList.add("on");
+        });
+      }, { rootMargin: "-30% 0px -60% 0px" });
+      document.querySelectorAll(".lcard").forEach(function (c) { io.observe(c); });
+    })();
+  </script>
 </body>
 </html>

@@ -8,9 +8,9 @@
   <title>Terms of Service · Onyx</title>
   <meta name="description" content="The terms for using Onyx, including Onyx Pro subscriptions." />
   <link rel="icon" href="assets/icon.jpg" />
-  <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/site.css?v=3" />
 </head>
-<body>
+<body class="legal-page" style="--tint:#598cff">
   <header class="site">
     <div class="nav">
       <a class="brand" href="./" aria-label="Onyx home"><img src="assets/icon.jpg" alt="" />ONYX</a>
@@ -22,52 +22,70 @@
       </nav>
     </div>
   </header>
-  <main class="legal">
-    <nav class="legal-tabs" aria-label="Policies"><a href="privacy.html">Privacy</a><a href="terms.html" aria-current=page>Terms</a><a href="medical.html">Medical Disclaimer</a><a href="support.html">Support</a><a href="accessibility.html">Accessibility</a></nav>
-    <h1>Terms of Service</h1>
-    <p class="updated">Last updated: 19 October 2026</p>
-<p>These terms govern your use of the Onyx iOS and watchOS app, made by TheMillerBrand. By using Onyx, you agree to them. If you don't agree, don't use the app. They are also Onyx's end-user licence agreement (EULA) on the App Store.</p>
-<h2 id="what-onyx-is">What Onyx is</h2>
-<p>Onyx is a personal health, fitness, and nutrition app for iPhone and Apple Watch. It reads metrics from Apple Health, computes a daily recovery score, generates training and nutrition guidance, reads imported bloodwork, and offers an AI coach that reasons against your current state. It is not a medical device, not a diagnostic tool, and not a replacement for a clinician.</p>
-<h2 id="your-account">Your account</h2>
-<p>There is no Onyx account. Your data lives on your iPhone. If you're signed in to iCloud, Onyx syncs your settings and preferences to your own private iCloud database using Apple's CloudKit; we can't read it, and we don't hold a copy. Your health data is not stored in iCloud. Apple's In-App Purchase system handles payment; we never see your payment details.</p>
-<h2 id="apple-health-permissions">Apple Health permissions</h2>
-<p>Onyx asks permission to read and write specific Apple Health metrics, in two stages: a core set at setup and a smaller second request the first time you open the Body tab. You grant or revoke each one in iOS Settings. Onyx can't function as designed without read access, but you decide what's shared, and the app degrades honestly rather than inventing numbers it can't measure.</p>
-<h2 id="onyx-pro">Onyx Pro</h2>
+  <main class="legal-wrap">
+    <p class="label" style="text-align:left">Policies</p>
+    <nav class="policy-cards" aria-label="Policies"><a class="pcard" href="privacy.html" style="--tint:#5cd973"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><b>Privacy</b><span>Your data, and who sees it</span></a><a class="pcard current" href="terms.html" style="--tint:#598cff" aria-current=page><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></span><b>Terms</b><span>The rules, and your subscription</span></a><a class="pcard" href="medical.html" style="--tint:#ff6b81"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><b>Medical Disclaimer</b><span>What Onyx is, and isn't</span></a><a class="pcard" href="support.html" style="--tint:#e2ac5f"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9.5a2 2 0 1 1 2.6 1.9c-.4.1-.6.5-.6.9v.2M12 14.5h.01"/></svg></span><b>Support</b><span>Answers, and how to reach me</span></a><a class="pcard" href="accessibility.html" style="--tint:#5ce6c7"><span class="pico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5l-3.5 6M12 15l3.5 6"/></svg></span><b>Accessibility</b><span>For every way you use Onyx</span></a></nav>
+
+    <header class="legal-hero glass">
+      <span class="hero-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></span>
+      <div>
+        <h1>Terms of Service</h1>
+        <p class="desc">The terms for using Onyx, including Onyx Pro subscriptions.</p>
+        <span class="chip">Updated 19 October 2026</span>
+      </div>
+    </header>
+
+    <div class="legal-body">
+      <aside class="toc"><div class="cap">On this page</div><a href="#what-onyx-is">What Onyx is</a><a href="#your-account">Your account</a><a href="#apple-health-permissions">Apple Health permissions</a><a href="#onyx-pro">Onyx Pro</a><a href="#acceptable-use">Acceptable use</a><a href="#coach-and-other-ai-features">Coach and other AI features</a><a href="#no-medical-advice">No medical advice</a><a href="#intellectual-property">Intellectual property</a><a href="#third-party-services">Third-party services</a><a href="#disclaimer-of-warranties">Disclaimer of warranties</a><a href="#limitation-of-liability">Limitation of liability</a><a href="#termination">Termination</a><a href="#governing-law">Governing law</a><a href="#changes-to-these-terms">Changes to these terms</a><a href="#contact">Contact</a></aside>
+      <article class="legal">
+        <div class="lead-card glass"><p>These terms govern your use of the Onyx iOS and watchOS app, made by TheMillerBrand. By using Onyx, you agree to them. If you don't agree, don't use the app. They are also Onyx's end-user licence agreement (EULA) on the App Store.</p></div>
+        <section class="lcard glass"><h2 id="what-onyx-is">What Onyx is</h2>
+<p>Onyx is a personal health, fitness, and nutrition app for iPhone and Apple Watch. It reads metrics from Apple Health, computes a daily recovery score, generates training and nutrition guidance, reads imported bloodwork, and offers an AI coach that reasons against your current state. It is not a medical device, not a diagnostic tool, and not a replacement for a clinician.</p></section><section class="lcard glass"><h2 id="your-account">Your account</h2>
+<p>There is no Onyx account. Your data lives on your iPhone. If you're signed in to iCloud, Onyx syncs your settings and preferences to your own private iCloud database using Apple's CloudKit; we can't read it, and we don't hold a copy. Your health data is not stored in iCloud. Apple's In-App Purchase system handles payment; we never see your payment details.</p></section><section class="lcard glass"><h2 id="apple-health-permissions">Apple Health permissions</h2>
+<p>Onyx asks permission to read and write specific Apple Health metrics, in two stages: a core set at setup and a smaller second request the first time you open the Body tab. You grant or revoke each one in iOS Settings. Onyx can't function as designed without read access, but you decide what's shared, and the app degrades honestly rather than inventing numbers it can't measure.</p></section><section class="lcard glass"><h2 id="onyx-pro">Onyx Pro</h2>
 <p>Pro is offered as a monthly subscription, an annual subscription, or a one-time lifetime purchase. Prices are shown in the app and may change. All transactions go through Apple's In-App Purchase system; Apple's terms govern purchase, refund, and renewal.</p>
 <p>Subscriptions auto-renew unless you turn off auto-renewal at least 24 hours before the period ends. Manage or cancel in iOS Settings → your name → Subscriptions.</p>
 <p>Refunds are handled by Apple. Request one through Apple's standard process at reportaproblem.apple.com.</p>
-<p>Grandfathered Pro: anyone who had a version of Onyx installed before v2.0 receives Pro for life at no cost. This is a courtesy and may be withdrawn if abused, for example by creating multiple installs to game it.</p>
-<h2 id="acceptable-use">Acceptable use</h2>
-<p>Don't try to break the app, reverse engineer it, or use it for anything unlawful. Don't use Coach to ask for help with anything illegal or harmful, or anything that would violate Anthropic's usage policies.</p>
-<h2 id="coach-and-other-ai-features">Coach and other AI features</h2>
+<p>Grandfathered Pro: anyone who had a version of Onyx installed before v2.0 receives Pro for life at no cost. This is a courtesy and may be withdrawn if abused, for example by creating multiple installs to game it.</p></section><section class="lcard glass"><h2 id="acceptable-use">Acceptable use</h2>
+<p>Don't try to break the app, reverse engineer it, or use it for anything unlawful. Don't use Coach to ask for help with anything illegal or harmful, or anything that would violate Anthropic's usage policies.</p></section><section class="lcard glass"><h2 id="coach-and-other-ai-features">Coach and other AI features</h2>
 <p>Coach, food photo parsing, menu reading, bloodwork extraction, and the written narratives are powered by an AI model and may produce inaccurate or incomplete results. Treat them as a thoughtful starting point, not a final answer. Onyx asks your permission before it sends anything to its AI provider, and you can turn AI features off at any time.</p>
-<p>Bloodwork extraction in particular reads numbers off an image. Check the values against your original lab report before acting on anything. Onyx shows you the extracted panel for review before it saves, and that review step exists for a reason.</p>
-<h2 id="no-medical-advice">No medical advice</h2>
-<p>Nothing in Onyx is medical advice. The recovery score, illness early-warning, heart-rhythm notifications surfaced from Apple Health, training recommendations, bloodwork readings, and Coach replies are signal, not diagnosis and not prescription. If something feels wrong, see a clinician. We are not liable for decisions you make based on Onyx's output. See the <a href="medical.html">Medical Disclaimer</a> for the longer version.</p>
-<h2 id="intellectual-property">Intellectual property</h2>
-<p>The Onyx app, its design, copy, and underlying code are owned by TheMillerBrand. You get a personal, non-transferable licence to use it on devices you own. You don't get to copy it, redistribute it, or build a competing product from it.</p>
-<h2 id="third-party-services">Third-party services</h2>
-<p>Onyx works with Apple Health, Apple CloudKit, Apple In-App Purchase, Anthropic (for Coach and every other AI feature), Railway (which hosts Onyx's server), OpenFoodFacts (for barcode scans), and Meta (to measure Onyx's own ads). Each has its own terms. We're not responsible for outages, errors, or terms changes from any third party. The <a href="privacy.html">Privacy Policy</a> explains what each one receives.</p>
-<h2 id="disclaimer-of-warranties">Disclaimer of warranties</h2>
-<p>Onyx is provided "as is." We don't warrant that it will be uninterrupted, error-free, or fit for any particular purpose. To the extent permitted by law, we disclaim all implied warranties.</p>
-<h2 id="limitation-of-liability">Limitation of liability</h2>
-<p>To the extent permitted by law, TheMillerBrand is not liable for indirect, incidental, special, or consequential damages arising from your use of Onyx. Our total liability for any claim is limited to the amount you paid us in the 12 months before the claim, and zero if you never paid.</p>
-<h2 id="termination">Termination</h2>
-<p>You can stop using Onyx any time by deleting it. Deleting the app does not remove settings already synced to your iCloud account; use Delete account &amp; data in Onyx first if you want them gone. We can suspend or terminate access if you violate these terms. Termination doesn't refund subscriptions.</p>
-<h2 id="governing-law">Governing law</h2>
-<p>These terms are governed by the laws of the United States and the State of New York, without regard to conflict-of-laws principles. Disputes will be resolved in the state or federal courts of New York County, New York.</p>
-<h2 id="changes-to-these-terms">Changes to these terms</h2>
-<p>We may update these terms. Material changes will be reflected here with a new date at the top. Continued use means you accept the new version.</p>
-<h2 id="contact">Contact</h2>
-<p><a href="mailto:millkid20@gmail.com">millkid20@gmail.com</a></p>
+<p>Bloodwork extraction in particular reads numbers off an image. Check the values against your original lab report before acting on anything. Onyx shows you the extracted panel for review before it saves, and that review step exists for a reason.</p></section><section class="lcard glass"><h2 id="no-medical-advice">No medical advice</h2>
+<p>Nothing in Onyx is medical advice. The recovery score, illness early-warning, heart-rhythm notifications surfaced from Apple Health, training recommendations, bloodwork readings, and Coach replies are signal, not diagnosis and not prescription. If something feels wrong, see a clinician. We are not liable for decisions you make based on Onyx's output. See the <a href="medical.html">Medical Disclaimer</a> for the longer version.</p></section><section class="lcard glass"><h2 id="intellectual-property">Intellectual property</h2>
+<p>The Onyx app, its design, copy, and underlying code are owned by TheMillerBrand. You get a personal, non-transferable licence to use it on devices you own. You don't get to copy it, redistribute it, or build a competing product from it.</p></section><section class="lcard glass"><h2 id="third-party-services">Third-party services</h2>
+<p>Onyx works with Apple Health, Apple CloudKit, Apple In-App Purchase, Anthropic (for Coach and every other AI feature), Railway (which hosts Onyx's server), OpenFoodFacts (for barcode scans), and Meta (to measure Onyx's own ads). Each has its own terms. We're not responsible for outages, errors, or terms changes from any third party. The <a href="privacy.html">Privacy Policy</a> explains what each one receives.</p></section><section class="lcard glass"><h2 id="disclaimer-of-warranties">Disclaimer of warranties</h2>
+<p>Onyx is provided "as is." We don't warrant that it will be uninterrupted, error-free, or fit for any particular purpose. To the extent permitted by law, we disclaim all implied warranties.</p></section><section class="lcard glass"><h2 id="limitation-of-liability">Limitation of liability</h2>
+<p>To the extent permitted by law, TheMillerBrand is not liable for indirect, incidental, special, or consequential damages arising from your use of Onyx. Our total liability for any claim is limited to the amount you paid us in the 12 months before the claim, and zero if you never paid.</p></section><section class="lcard glass"><h2 id="termination">Termination</h2>
+<p>You can stop using Onyx any time by deleting it. Deleting the app does not remove settings already synced to your iCloud account; use Delete account &amp; data in Onyx first if you want them gone. We can suspend or terminate access if you violate these terms. Termination doesn't refund subscriptions.</p></section><section class="lcard glass"><h2 id="governing-law">Governing law</h2>
+<p>These terms are governed by the laws of the United States and the State of New York, without regard to conflict-of-laws principles. Disputes will be resolved in the state or federal courts of New York County, New York.</p></section><section class="lcard glass"><h2 id="changes-to-these-terms">Changes to these terms</h2>
+<p>We may update these terms. Material changes will be reflected here with a new date at the top. Continued use means you accept the new version.</p></section><section class="lcard glass"><h2 id="contact">Contact</h2>
+<p><a href="mailto:millkid20@gmail.com">millkid20@gmail.com</a></p></section>
+      </article>
+    </div>
   </main>
   <footer class="site">
     <div class="foot">
       <div class="brandline"><img src="assets/icon.jpg" alt="" />Onyx: Fitness &amp; AI Coach</div>
-      <nav aria-label="Footer"><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html" aria-current=page>Terms</a><a href="medical.html">Medical Disclaimer</a><a href="support.html">Support</a><a href="accessibility.html">Accessibility</a></nav>
+      <nav aria-label="Footer"><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="medical.html">Medical Disclaimer</a><a href="support.html">Support</a><a href="accessibility.html">Accessibility</a></nav>
       <p>Onyx is not a medical device and does not diagnose. © 2026 TheMillerBrand.</p>
     </div>
   </footer>
+  <script>
+    // Highlight the section you're reading in "On this page".
+    (function () {
+      var links = document.querySelectorAll(".toc a");
+      if (!links.length || !("IntersectionObserver" in window)) return;
+      var byId = {};
+      links.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          links.forEach(function (a) { a.classList.remove("on"); });
+          var h = e.target.querySelector("h2"), a = h && byId[h.id];
+          if (a) a.classList.add("on");
+        });
+      }, { rootMargin: "-30% 0px -60% 0px" });
+      document.querySelectorAll(".lcard").forEach(function (c) { io.observe(c); });
+    })();
+  </script>
 </body>
 </html>
