@@ -399,3 +399,8 @@ footer nav a{color:var(--muted)}
 .legal td{color:#c7c7cc}
 .legal .table-wrap{overflow-x:auto}
 .legal .lead{font-size:1.15rem;color:var(--ink)}
+.legal h3{font-size:1.1rem;margin:28px 0 8px}
+.legal-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.legal-tabs a{padding:7px 14px;border-radius:980px;border:1px solid var(--line);color:var(--muted);font-size:.86rem}
+.legal-tabs a:hover{text-decoration:none;color:var(--ink);background:rgba(255,255,255,.05)}
+.legal-tabs a[aria-current=page]{background:var(--ink);color:#000;border-color:var(--ink)}
