@@ -4,14 +4,16 @@ slug: privacy
 description: What Onyx reads, what leaves your iPhone, who handles it, and how to remove it.
 ---
 
-*Last updated: 19 October 2026*
+*Last updated: 20 October 2026*
 
 **Onyx: Fitness & AI Coach** is made by The Miller Brand ("we"). This policy
 explains what Onyx reads, what leaves your iPhone, who handles it, and how to
-remove it. The short version: your health data lives on your iPhone. Some of it
-goes to our AI provider, Anthropic, only when you use a feature that needs it,
-only after you've given Onyx permission, and only to answer you. Your health
-data is never sold or used for advertising.
+remove it. The short version: your health data lives on your iPhone. Before you
+use the app, Onyx asks about two optional things, separately: AI features,
+which send what's needed to our AI provider, Anthropic, only when you use them;
+and ad measurement, which tells Meta about installs and purchases. Each is off
+unless you turn it on, and everything else works either way. Your health data is never sold or
+used for advertising.
 
 ## 1. What Onyx reads from Apple Health
 
@@ -71,11 +73,13 @@ the minimum needed to our server (hosted by **Railway**, in the United States),
 which forwards it to **Anthropic, PBC** (the maker of the Claude AI) and
 returns the answer.
 
-**Onyx asks first.** The first time you use one of these features, Onyx shows
-what will be sent, who receives it and what happens to it, and sends nothing
-unless you tap **Allow**. You can turn it off any time in **You → Privacy &
-data → AI features**; with it off, these features are unavailable and nothing
-is sent. Everything else in Onyx keeps working.
+**Onyx asks first.** Before you start using Onyx (and again after an update
+that changes this policy), a privacy screen explains what these features send,
+who receives it and what happens to it, with its own switch, off until you turn
+it on (or tap **Allow both**). Left off, these features stay off and nothing
+is sent; everything else in Onyx keeps working. You can change
+this any time in **You → Privacy & data → AI features**; turning it on shows
+the full details again and asks you to allow it.
 
 What each feature sends:
 
@@ -129,14 +133,15 @@ sends:
   your data.
 
 We keep these for up to 90 days to understand what's working. Turning the
-setting off stops both, and the ad measurement below, and deletes the install
-identifier.
+setting off stops both and deletes the install identifier.
 
 ## 8. Measuring our ads (Meta)
 
 We advertise Onyx on Facebook and Instagram. To learn which ads lead people to
-install and subscribe, Onyx includes **Meta's App Events SDK**. Unless you turn
-off **Share anonymous usage**, it sends Meta (Meta Platforms, Inc.):
+install and subscribe, Onyx includes **Meta's App Events SDK**. It runs only if
+you turn it on on the privacy screen, or later turn on **You → Privacy & data → Ad
+measurement**; until then it isn't started and nothing reaches Meta. When it's
+on, it sends Meta (Meta Platforms, Inc.):
 
 - that Onyx was installed and opened;
 - that a free trial started or a subscription was bought — the plan, price and
@@ -145,15 +150,19 @@ off **Share anonymous usage**, it sends Meta (Meta Platforms, Inc.):
   iOS and app versions, and IP address.
 
 **No health or fitness data, nothing you've logged and nothing you've told Coach
-is ever sent to Meta.** Onyx doesn't ask for permission to track you, so Meta's
-SDK doesn't receive your device's advertising identifier. Meta handles this
-data under its own terms and privacy policy.
+is ever sent to Meta.** Apple counts this as tracking, so when you turn ad
+measurement on, iOS also asks whether Onyx may track you. Meta's SDK only runs
+if you allow it there too; if you do, Meta may also receive your device's
+advertising identifier, to match installs to the ads that led to them. Meta
+handles this data under its own terms and privacy policy. Turning **Ad
+measurement** off in Onyx, or tracking off in iOS Settings → Privacy & Security
+→ Tracking, stops it.
 
 ## 9. Your iCloud
 
 If you're signed in to iCloud, Onyx syncs your **settings and preferences** —
 exercise preferences, custom exercises, workout templates, recipes, your
-grocery list and pantry, and how your coach looks — to **your private iCloud
+grocery list and pantry, how your coach looks, and your privacy choices — to **your private iCloud
 database**, which only you can access; we can't read it. **No health
 information is stored in iCloud.** (Versions before 3.7 synced some health data;
 Onyx 3.7 deletes it from your iCloud the first time it runs.) To remove what's
@@ -188,11 +197,11 @@ their data.
 
 ## 15. Your choices
 
-- Turn AI features on or off in You → Privacy & data → AI features.
+- Turn AI features and ad measurement on or off in You → Privacy & data. Your
+  choice is saved to your private iCloud, so a new iPhone remembers it.
 - Change Health permissions any time in iOS Settings → Health → Data Access.
-- Turn off meals to Health or anonymous usage (which also stops ad
-  measurement) in You → Privacy & data, and any notification in You →
-  Notifications.
+- Turn off meals to Health or anonymous usage in You → Privacy & data, and any
+  notification in You → Notifications.
 - Export everything Onyx holds (You → Privacy & data → Export everything).
 - Delete your data with You → Privacy & data → Delete account & data.
 - On Onyx 3.7 and earlier, these settings are under Settings → Your data.
