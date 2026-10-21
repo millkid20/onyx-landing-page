@@ -150,10 +150,13 @@ on, it sends Meta (Meta Platforms, Inc.):
   iOS and app versions, and IP address.
 
 **No health or fitness data, nothing you've logged and nothing you've told Coach
-is ever sent to Meta.** Onyx doesn't ask for permission to track you, so Meta's
-SDK doesn't receive your device's advertising identifier. Meta handles this
-data under its own terms and privacy policy. Turning **Ad measurement** off
-stops it.
+is ever sent to Meta.** Apple counts this as tracking, so when you turn ad
+measurement on, iOS also asks whether Onyx may track you. Meta's SDK only runs
+if you allow it there too; if you do, Meta may also receive your device's
+advertising identifier, to match installs to the ads that led to them. Meta
+handles this data under its own terms and privacy policy. Turning **Ad
+measurement** off in Onyx, or tracking off in iOS Settings → Privacy & Security
+→ Tracking, stops it.
 
 ## 9. Your iCloud
 
