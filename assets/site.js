@@ -196,8 +196,8 @@
        "On the 3 nights you logged drinks, your HRV averaged 41 ms against your usual 51. Two 3pm espressos didn't help. Try caffeine before noon this week and I'll watch what happens."],
       ["Build me 45 minutes with dumbbells.",
        "Upper Body, 45 minutes: incline press 4×8, one-arm row 4×10, seated press 3×10, lateral raise 3×12, curls 3×10. Weights start from last time.", true],
-      ["Walk me through my labs.",
-       "Two things stand out. Ferritin is low at 18, so I've eased your intensity and added iron-rich meals. LDL is 142, but down from 158 over three draws: the extra fibre is working. Worth a chat with your doctor at your next visit."]
+      ["What should I eat before my long run?",
+       "Make tonight's dinner carb-forward: rice or pasta with a lean protein, easy on fat and fibre. Tomorrow, a banana and toast about an hour before you head out. You've got 750 kcal left today, so there's room."]
     ];
     var busy = false, chips = $$("#qchips button");
     function bubble(cls, html) {
