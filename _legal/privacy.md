@@ -9,10 +9,10 @@ description: What Onyx reads, what leaves your iPhone, who handles it, and how t
 **Onyx: Fitness & AI Coach** is made by The Miller Brand ("we"). This policy
 explains what Onyx reads, what leaves your iPhone, who handles it, and how to
 remove it. The short version: your health data lives on your iPhone. Before you
-use the app, Onyx asks whether you agree to two optional things: AI features,
+use the app, Onyx asks about two optional things, separately: AI features,
 which send what's needed to our AI provider, Anthropic, only when you use them;
-and ad measurement, which tells Meta about installs and purchases. Say no and
-both stay off while everything else works. Your health data is never sold or
+and ad measurement, which tells Meta about installs and purchases. Each is off
+unless you turn it on, and everything else works either way. Your health data is never sold or
 used for advertising.
 
 ## 1. What Onyx reads from Apple Health
@@ -75,9 +75,9 @@ returns the answer.
 
 **Onyx asks first.** Before you start using Onyx (and again after an update
 that changes this policy), a privacy screen explains what these features send,
-who receives it and what happens to it. Nothing is sent unless you tap
-**Agree**. If you choose **Continue without AI and ads**, these features stay
-off and nothing is sent; everything else in Onyx keeps working. You can change
+who receives it and what happens to it, with its own switch, off until you turn
+it on (or tap **Allow both**). Left off, these features stay off and nothing
+is sent; everything else in Onyx keeps working. You can change
 this any time in **You → Privacy & data → AI features**; turning it on shows
 the full details again and asks you to allow it.
 
@@ -139,7 +139,7 @@ setting off stops both and deletes the install identifier.
 
 We advertise Onyx on Facebook and Instagram. To learn which ads lead people to
 install and subscribe, Onyx includes **Meta's App Events SDK**. It runs only if
-you agree on the privacy screen, or later turn on **You → Privacy & data → Ad
+you turn it on on the privacy screen, or later turn on **You → Privacy & data → Ad
 measurement**; until then it isn't started and nothing reaches Meta. When it's
 on, it sends Meta (Meta Platforms, Inc.):
 
